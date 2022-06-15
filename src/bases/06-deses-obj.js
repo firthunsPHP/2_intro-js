@@ -1,4 +1,5 @@
 
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 // Desestructuración
 // Asignación Desestructurante
 const persona = {
@@ -6,12 +7,12 @@ const persona = {
     edad: 45,
     clave: 'Ironman'
 };
-//
-// const { edad, clave, nombre, } = persona;
-//
-// console.log( nombre );
-// console.log( edad );
-// console.log( clave );
+
+const { edad, clave, nombre, } = persona;
+
+console.log( nombre );
+console.log( edad );
+console.log( clave );
 
 const usarContext = ({ clave, nombre, edad, rango = 'Capitán' }) => {
 
@@ -29,9 +30,9 @@ const usarContext = ({ clave, nombre, edad, rango = 'Capitán' }) => {
 
 }
 
+
 const { nombreClave, anios, latlng: { lat, lng } } = usarContext( persona );
 
 console.log(nombreClave, anios);
 console.log( lat, lng );
-
 
